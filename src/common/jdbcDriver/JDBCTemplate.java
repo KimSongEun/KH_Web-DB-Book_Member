@@ -1,10 +1,16 @@
 package common.jdbcDriver;
 
-import java.io.*;
-import java.sql.*;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.Properties;
 
 public class JDBCTemplate {
+
 	public JDBCTemplate() {
 	}
 
@@ -53,11 +59,11 @@ public class JDBCTemplate {
 		}
 	}
 
-	public static void commit(Connection con) { 
-	 try { 
-	 if (con != null && !con.isClosed()) { con.commit(); } 
-	} catch (SQLException e) { e.printStackTrace(); } 
-	 }
+	public static void commit(Connection con) {
+		try {
+		if (con != null && !con.isClosed()) { con.commit(); }
+		} catch (SQLException e) { e.printStackTrace(); }
+		}
 
 	public static void rollback(Connection con) {
 		try {

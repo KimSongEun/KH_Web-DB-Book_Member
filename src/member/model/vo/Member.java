@@ -1,7 +1,10 @@
 package member.model.vo;
 
+//import java.io.Serializable;
+
 public class Member implements java.io.Serializable {
 	private static final long serialVersionUID = 1L;
+	
 	private String id;
 	private String passwd;
 	private String name;
@@ -18,12 +21,11 @@ public class Member implements java.io.Serializable {
 		this.email = email;
 	}
 
-	@Override // toString() 재정의
+	@Override
 	public String toString() {
 		return "Member [id=" + id + ", passwd=" + passwd + ", name=" + name + ", email=" + email + "]";
 	}
 
-	/* …… Getter & Setter 선언부 …… */
 	public String getId() {
 		return id;
 	}

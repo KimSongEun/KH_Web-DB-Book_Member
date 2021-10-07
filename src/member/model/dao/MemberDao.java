@@ -1,16 +1,20 @@
 package member.model.dao;
 
 import static common.jdbcDriver.JDBCTemplate.*;
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 import member.model.vo.Member;
 
 public class MemberDao {
+
 	public MemberDao() {
 	}
 
-// 사용자 로그인 메소드 
-// 매개변수로 받은 ID와 PASSWD로 DataBase에 접속하여 일치하는 데이터 조회 
+	// 사용자 로그인 메소드
+	// 매개변수로 받은 ID와 PASSWD로 DataBase에 접속하여 일치하는 데이터 조회
 	public Member loginMember(Connection con, String id, String passwd) {
 		Member m = null;
 		PreparedStatement pstmt = null;
