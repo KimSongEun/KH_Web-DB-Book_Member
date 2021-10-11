@@ -15,5 +15,11 @@
 	<br>
 	<br>
 	<h2 align="center">index page 입니다.</h2>
+	<form action = "upload.do" method = "post" enctype = "multipart/form-data">
+		글쓴이 : <input type="text" name="name" /><br /> 
+		제 목 : <input type="text" name="title" /><br /> 
+		첨부파일 : <input type="file" name="uploadFile" /><br />
+		<input type="submit" value="전송" />
+	</form>
 </body>
 </html>
